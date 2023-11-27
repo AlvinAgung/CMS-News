@@ -812,19 +812,19 @@
                         <div class="stats-item d-flex align-items-center">
                             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Total Pengunjung</strong>Hari ini</p>
+                            <p><strong>Total Pengunjung</strong> Hari ini</p>
                         </div><!-- End Stats Item -->
 
                         <div class="stats-item d-flex align-items-center">
                             <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Total Pengunjung</strong>Hari ini</p>
+                            <p><strong>Total Pengunjung</strong> Hari ini</p>
                         </div><!-- End Stats Item -->
 
                         <div class="stats-item d-flex align-items-center">
                             <span data-purecounter-start="0" data-purecounter-end="953" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Total Pengunjung</strong>Hari ini</p>
+                            <p><strong>Total Pengunjung</strong> Hari ini</p>
                         </div><!-- End Stats Item -->
 
                     </div>
