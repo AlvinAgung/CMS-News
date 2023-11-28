@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Acara;
+use App\Models\News;
+use App\Models\Video;
+use App\Models\Villageofficer;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,7 +15,31 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.dashboard');
+        $berita = News::count();
+        if($berita != null){
+            $totalberita = $berita;
+        }else{
+            $totalberita = '0';
+        }
+        $acara = Acara::count();
+        if($acara != null){
+            $totalacara = $acara;
+        }else{
+            $totalacara = '0';
+        }
+        $video =  Video::count();
+        if($video != null){
+            $totalvideo = $video;
+        }else{
+            $totalvideo = '0';
+        }
+        $villageofficer =  Villageofficer::count();
+        if($villageofficer != null){
+            $totalvillageofficer = $villageofficer;
+        }else{
+            $totalvillageofficer = '0';
+        }
+        return view('pages.admin.dashboard',compact('totalberita','totalacara','totalvideo','totalvillageofficer'));
     }
 
     /**

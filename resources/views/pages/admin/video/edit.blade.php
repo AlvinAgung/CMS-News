@@ -35,24 +35,21 @@
                                             @method('put')
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Title</label>
-                                                <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="name" class="form-control @error('title') is-invalid @enderror"
                                                     placeholder="input Title" aria-label="title" aria-describedby="title" name="title" value="{{$show->title}}">
-                                                @error('name')
+                                                @error('title')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Video URL</label>
-
                                                 <input type="text" class="form-control" name="video_url" id="video_url" value="{{$show->video_url}}">
-{{-- 
-                                                <input type="file" class="form-control" name="video_url_file" id="video_url_file" hidden>
-                                                <span class="help-block" id="format_video_file" hidden>Format : jpg, jpeg, png. Max file size 20Mb</span> --}}
+                                                @error('video_url')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Status</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
                                                     <select name="status" class="form-control select-search" data-fouc>
                                                         @if ($show->status == 'VIDEO UTAMA')
                                                             <option value="VIDEO UTAMA" selected>Video Utama</option>
@@ -63,9 +60,6 @@
                                                         @endif
                                                    
                                                     </select>
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                                             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Simpan</button>
                                   

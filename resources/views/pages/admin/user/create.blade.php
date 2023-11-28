@@ -43,18 +43,18 @@
 
                                             <div class="mb-1">
                                                 <label class="form-label" for="email">Email</label>
-                                                <input type="text" id="email" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="email" class="form-control @error('email') is-invalid @enderror"
                                                     placeholder="input email name" aria-label="email" aria-describedby="email" name="email">
-                                                @error('name')
+                                                @error('email')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
 
                                             <div class="mb-1">
                                                 <label class="form-label" for="email">Passowrd</label>
-                                                <input type="text" id="password" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="password" class="form-control @error('password') is-invalid @enderror"
                                                     placeholder="input new password" aria-label="password" aria-describedby="password" name="password">
-                                                @error('name')
+                                                @error('password')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
@@ -66,11 +66,6 @@
                                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                                     @endforeach 
                                                 </select>
-                                                {{-- <input type="text" id="role" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input role name" aria-label="role" aria-describedby="password" name="password"> --}}
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
 
                                             <div class="mb-1">
@@ -80,11 +75,6 @@
                                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                                     @endforeach 
                                                 </select>
-                                                {{-- <input type="text" id="role" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input role name" aria-label="role" aria-describedby="password" name="password"> --}}
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                               
                                             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Simpan</button>

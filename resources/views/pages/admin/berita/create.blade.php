@@ -34,24 +34,19 @@
                                             @csrf
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Title</label>
-                                                <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="name" class="form-control @error('title') is-invalid @enderror"
                                                     placeholder="input Title" aria-label="title" aria-describedby="title" name="title">
-                                                @error('name')
+                                                @error('title')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Category</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
-                                                <select name="category_id" id="category_id" class="form-control @error('name') is-invalid @enderror">
+                                                <select name="category_id" id="category_id" class="form-control">
                                                    @foreach ($kategori as $item)
                                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                                    @endforeach
                                                 </select>
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Content</label>
@@ -62,26 +57,19 @@
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Picture</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
                                                 {{-- <img  id="preview" src="{{URL::to('storage/aset/file-media.svg')}}" style="width: auto; height: 125px; border-radius: 2px; margin-bottom: 4px;" alt=""> --}}
                                                 <input id="fill" onchange="previewFile()" type="file" class="form-control" name="picture">
                                                 <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
-                                                @error('name')
+                                                @error('picture')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Status</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
                                                     <select name="status" class="form-control select-search" data-fouc>
                                                         <option value="DRAFT">Draft</option>
                                                         <option value="PUBLISHED">Published</option>
                                                     </select>
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                                             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Simpan</button>
                                   

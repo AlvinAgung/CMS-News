@@ -15,9 +15,9 @@
                 <div class="container position-relative">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-6 text-center">
-                            <h2>Berita</h2>
+                            <h2>Video</h2>
                             <p>
-                                Berita adalah cermin dinamika dunia, menghadirkan informasi aktual yang mencakup peristiwa, fakta, dan opini terkini..</p>
+                            Video berfungsi sebagai penjelasan atau pengantar yang mendetail tentang isi video, dan dapat membantu menarik perhatian pemirsa potensial.</p>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="container">
                     <ol>
                         <li><a href="{{route('landing')}}">Home</a></li>
-                        <li>Berita</li>
+                        <li>Video</li>
                     </ol>
                 </div>
             </nav>
@@ -38,40 +38,24 @@
 
                 <div class="row gy-4 posts-list">
 
-                    @foreach ($berita as $item)
+                    @foreach ($video as $item)
 
-                    
-                    <div class="col-xl-4 col-md-6">
-                        <article>
-
-                            <div class="post-img">
-                                <img src="{{ asset('storage/picture/news/'.$item->picture) }}" alt=""
-                                    class="img-fluid">
+                    <div id="video" class="col-xl-4 col-md-6">
+                        <section id="call-to-action" class="call-to-action">
+                            <?php $url = $item->video_url; ?>
+                            <?php $videoId = str_replace('https://www.youtube.com/watch?v=', '', $url); ?>
+                            <div class="container text-center" style=" background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ytimg.com/vi/{{$videoId}}/maxresdefault.jpg') center center;  padding:50px 60px !important;" data-aos="zoom-out">
+                                <a href="{{$item->video_url}}" class="glightbox play-btn"></a>
+                                <h3>{{$item->title}}</h3>
+                                <p> Klik Logo Play Button Untuk Memutar Video.</p>
+                                {{-- <a class="cta-btn" href="#">Call To Action</a> --}}
                             </div>
-
-                            <p class="post-category">{{$item->Category->name}}</p>
-
-                            <h2 class="title">
-                                <a href="news/{{$item->slug}}">{{$item->title}}</a>
-                            </h2>
-
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('storage/asset-profil/user-profil.jpg') }}" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
-                                <div class="post-meta">
-                                    <p class="post-author-list">{{$item->user->name}}</p>
-                                    <p class="post-date">
-                                        <time datetime="">{{date('d M Y', strtotime($item->created_at))}}</time>
-                                    </p>
-                                </div>
-                            </div>
-
-                        </article>
-                    </div><!-- End post list item -->
+                        </section><!-- End Call To Action Section -->
+                    </div>
                         
                     @endforeach
 
-                    {{ $berita->links('includes.pagination') }}
+                    {{ $video->links('includes.pagination') }}
                 {{-- <div class="blog-pagination">
                     <ul class="justify-content-center">
                         <li><a href="#">1</a></li>

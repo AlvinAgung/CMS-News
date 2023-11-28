@@ -46,6 +46,8 @@ Route::group([
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('news', [LandingController::class, 'news'])->name('landing.news');
+Route::get('list-video', [LandingController::class, 'video'])->name('landing.video');
+Route::get('list-perangkat-desa', [LandingController::class, 'perangkat_desa'])->name('landing.perangkat-desa');
 Route::get('news/{slug}', [LandingController::class, 'newsdetail'])->name('landing.news-detail');
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('action-login', [AuthController::class, 'actionLogin'])->name('action-login');

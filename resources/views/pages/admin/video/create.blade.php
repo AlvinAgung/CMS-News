@@ -34,30 +34,20 @@
                                             @csrf
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Title</label>
-                                                <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="name" class="form-control @error('title') is-invalid @enderror"
                                                     placeholder="input Title" aria-label="title" aria-describedby="title" name="title">
-                                                @error('name')
+                                                @error('title')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Video URL</label>
                                                 <input type="text" class="form-control" name="video_url" id="video_url" placeholder="Input Video URL">
-{{-- 
-                                                <input type="file" class="form-control" name="video_url_file" id="video_url_file" hidden>
-                                                <span class="help-block" id="format_video_file" hidden>Format : jpg, jpeg, png. Max file size 20Mb</span> --}}
-                                            </div>
-                                            {{-- <div class="mb-1">
-                                                <label class="form-label" for="name">Status</label>
-                                            
-                                                    <select name="status" class="form-control select-search" data-fouc>
-                                                        <option value="VIDEO UTAMA">Video Utama</option>
-                                                        <option value="Video">Video</option>
-                                                    </select>
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @error('video_url')
+                                                <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
-                                            </div> --}}
+                                            </div>
+
                                             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Simpan</button>
                                   
                                     </form>

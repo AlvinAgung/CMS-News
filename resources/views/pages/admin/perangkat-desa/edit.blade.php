@@ -35,9 +35,9 @@
                                             @method('put')
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">NIP</label>
-                                                <input type="text" id="nip" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="nip" class="form-control @error('nip') is-invalid @enderror"
                                                     placeholder="Input NIP" aria-label="nip" aria-describedby="nip" name="nip" value="{{$show->nip}}">
-                                                @error('name')
+                                                @error('nip')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
@@ -51,16 +51,14 @@
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="address">Address</label>
-                                                <input type="text" id="address" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="address" class="form-control @error('address') is-invalid @enderror"
                                                     placeholder="Input Address" aria-label="address" aria-describedby="address" name="address" value="{{$show->address}}">
-                                                @error('name')
+                                                @error('address')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Gender</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
                                                     <select name="gender" class="form-control select-search" data-fouc>
                                                         @if ($show->gender == 'Perempuan')
                                                             <option value="Laki - Laki">Laki - Laki</option>
@@ -76,44 +74,40 @@
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="email">Email</label>
-                                                <input type="text" id="email" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="email" class="form-control @error('email') is-invalid @enderror"
                                                     placeholder="Input Email" aria-label="email" aria-describedby="email" name="email" value="{{$show->email}}">
-                                                @error('name')
+                                                @error('email')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="telp">Telp</label>
-                                                <input type="text" id="telp" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="telp" class="form-control @error('telp') is-invalid @enderror"
                                                     placeholder="Input Telp" aria-label="telp" aria-describedby="telp" name="telp" value="{{$show->telp}}">
-                                                @error('name')
+                                                @error('telp')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="jabatan">Jabatan</label>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
-                                                <select name="jabatan_id" id="jabatan_id" class="form-control @error('jabatan') is-invalid @enderror">
+                                                <select name="jabatan_id" id="jabatan_id" class="form-control @error('jabatan_id') is-invalid @enderror">
                                                    @foreach ($jabatan as $item)
                                                         <option value="{{$item->id}}" {{$show->jabatan_id == $item->id ? 'selected' : ''}}>{{$item->name}}</option>
                                                    @endforeach
                                                 </select>
-                                                @error('name')
+                                                @error('jabatan_id')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Photo</label>
                                                 <br>
-                                                {{-- <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input category name" aria-label="name" aria-describedby="name" name="name"> --}}
                                                 <img  id="preview" src="{{URL::to('storage/picture/perangkat-desa/'.$show->photo)}}" style="width: auto; height: 125px; border-radius: 2px; margin-bottom: 4px;" alt="">
                                                 <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
                                                 placeholder="input category name" aria-label="name" aria-describedby="name" name="picture2" value="{{$show->photo}}" hidden>
                                                 <input id="fill" onchange="previewFile()" type="file" class="form-control" name="picture">
                                                 <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
-                                                @error('name')
+                                                @error('picture')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>

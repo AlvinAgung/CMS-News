@@ -44,20 +44,20 @@
 
                                             <div class="mb-1">
                                                 <label class="form-label" for="email">Email</label>
-                                                <input type="text" id="email" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="email" class="form-control @error('email') is-invalid @enderror"
                                                     placeholder="input email name" aria-label="email" aria-describedby="email" name="email" value="{{$show->email}}">
-                                                @error('name')
+                                                @error('email')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
 
                                             <div class="mb-1">
                                                 <label class="form-label" for="email">Password</label>
-                                                <input type="text" id="password" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="text" id="password" class="form-control @error('password') is-invalid @enderror"
                                                     placeholder="input password name" aria-label="password" aria-describedby="password" name="password">
                                                     <input type="text" id="password" class="form-control @error('name') is-invalid @enderror"
                                                     placeholder="input password name" aria-label="password" aria-describedby="password" name="password2" value="{{$show->password}}" hidden>
-                                                @error('name')
+                                                @error('password')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
@@ -69,11 +69,6 @@
                                                     <option value="{{$item->id}}" {{$show->role_id == $item->id ? 'selected' : ''}}>{{$item->name}}</option>
                                                     @endforeach 
                                                 </select>
-                                                {{-- <input type="text" id="role" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input role name" aria-label="role" aria-describedby="password" name="password"> --}}
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
 
                                             <div class="mb-1">
@@ -83,11 +78,6 @@
                                                     <option value="{{$item->id}}" {{$show->village_officer_id == $item->id ? 'selected' : ''}}>{{$item->name}}</option>
                                                     @endforeach 
                                                 </select>
-                                                {{-- <input type="text" id="role" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input role name" aria-label="role" aria-describedby="password" name="password"> --}}
-                                                @error('name')
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                               
                                             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Simpan</button>       

@@ -37,8 +37,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="my-auto">
-                                                    <h4 class="fw-bolder mb-0">230k</h4>
-                                                    <p class="card-text font-small-3 mb-0">Sales</p>
+                                                    <h4 class="fw-bolder mb-0">{{$totalberita}}</h4>
+                                                    <p class="card-text font-small-3 mb-0">Berita</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -50,8 +50,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="my-auto">
-                                                    <h4 class="fw-bolder mb-0">8.549k</h4>
-                                                    <p class="card-text font-small-3 mb-0">Customers</p>
+                                                    <h4 class="fw-bolder mb-0">{{$totalacara}}</h4>
+                                                    <p class="card-text font-small-3 mb-0">Acara</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -63,8 +63,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="my-auto">
-                                                    <h4 class="fw-bolder mb-0">1.423k</h4>
-                                                    <p class="card-text font-small-3 mb-0">Products</p>
+                                                    <h4 class="fw-bolder mb-0">{{$totalvideo}}</h4>
+                                                    <p class="card-text font-small-3 mb-0">Video</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -76,8 +76,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="my-auto">
-                                                    <h4 class="fw-bolder mb-0">$9745</h4>
-                                                    <p class="card-text font-small-3 mb-0">Revenue</p>
+                                                    <h4 class="fw-bolder mb-0">{{$totalvillageofficer}}</h4>
+                                                    <p class="card-text font-small-3 mb-0">Perangkat Desa</p>
                                                 </div>
                                             </div>
                                         </div>

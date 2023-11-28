@@ -33,24 +33,24 @@
                                             @csrf
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Title</label>
-                                                <input type="input" id="name" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="input" id="name" class="form-control @error('title') is-invalid @enderror"
                                                   placeholder="Input Title"  aria-label="title" aria-describedby="title" name="title">
-                                                @error('name')
+                                                @error('title')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Time</label>
-                                                <input type="datetime-local" id="name" class="form-control @error('name') is-invalid @enderror"
+                                                <input type="datetime-local" id="name" class="form-control @error('time') is-invalid @enderror"
                                                     aria-label="time" aria-describedby="time" name="time">
-                                                @error('name')
+                                                @error('time')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Content</label>
                                                 <textarea name="content" id="editor"></textarea>
-                                                @error('name')
+                                                @error('content')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
