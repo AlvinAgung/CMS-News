@@ -26,12 +26,12 @@
                         <div class="col-xl-12 col-md-12 col-12">
                             <div class="card card-statistics">
                                 <div class="card-header">
-                                    <h4 class="card-title">Perangkat Desa</h4>
+                                    <h4 class="card-title">Data Perangkat Desa</h4>
                                     <div class="d-flex align-items-center">
-                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('perangkat-desa.create')}}">Add News</a></button>
+                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('perangkat-desa.create')}}">Tambah Perangkat Desa</a></button>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x:auto;">
                                     <table class="dt-responsive table text-center">
                                         <thead>
                                             <tr>
@@ -61,8 +61,8 @@
                                                 <td><img src="{{ asset('storage/picture/perangkat-desa/'.$item->photo)}}" width="100px" height="100px" alt=""></td>
 
                                                 <td>
-                                                    <a href="{{route('perangkat-desa.show', $item->id)}}"><button class="btn btn-warning">Update</button></a>
-                                                    <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+                                                    <a href="{{route('perangkat-desa.show', $item->id)}}"><button class="btn btn-warning"><i class="fa fa-edit"></i></button></a>
+                                                    <button class="btn btn-danger" onclick="confirmDelete()"><i class="fa fa-trash"></i></button>
                                                     <form id="deleteForm" action="{{route('perangkat-desa.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
@@ -87,10 +87,19 @@
 @push('before-js')
 @endpush
 @push('after-js')
+{{-- <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.4/js/dataTables.bootstrap4.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css"> --}}
+{{-- 
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script> --}}
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
     <script>
         function confirmDelete() {
             var result = window.confirm("Apakah kamu yakin ingin menghapus?");

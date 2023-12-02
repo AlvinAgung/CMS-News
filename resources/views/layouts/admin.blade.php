@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<html class="loading" lang="en" data-layout="dark-layout" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
 <head>
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}app-assets/css/themes/dark-layout.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}app-assets/css/themes/bordered-layout.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}app-assets/fonts/font-awesome/css/font-awesome.css">
 
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css"

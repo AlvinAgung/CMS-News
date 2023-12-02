@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger("role_id");
-            $table->unsignedBigInteger("village_officer_id");
+            $table->unsignedBigInteger("village_officer_id")->nullable();
             $table->rememberToken();
             $table->timestamps();
             // $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');

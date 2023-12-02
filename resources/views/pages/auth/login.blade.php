@@ -11,7 +11,7 @@
     <meta name="keywords"
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>E-News</title>
+    <title>Login Admin</title>
     <link rel="apple-touch-icon" href="{{ asset('') }}app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('') }}app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
@@ -100,10 +100,10 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <h2 class="brand-text text-primary ms-1">E-News</h2>
+                                    <h2 class="brand-text text-primary ms-1">Login Admin</h2>
                                 </a>
 
-                                <h4 class="card-title mb-1">Selamat Datang di E-News! 👋</h4>
+                                <h4 class="card-title mb-1">Selamat Datang di Login Admin!</h4>
                                 <p class="card-text mb-2">Mohon untuk login untuk upload berita terbaru</p>
 
                                 <form class="auth-login-form mt-2" action="{{ route('action-login') }}"
@@ -139,14 +139,14 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary w-100" tabindex="4">Sign in</button>
+                                    <button class="btn btn-primary w-100" tabindex="4">Masuk</button>
                                 </form>
 
                                 <p class="text-center mt-2">
-                                    <span>Belum Memiliki akun?</span>
+                                    {{-- <span>Belum Memiliki akun?</span>
                                     <a href="{{ route('register') }}">
                                         <span>Buat akun</span>
-                                    </a>
+                                    </a> --}}
                                 </p>
                             </div>
                         </div>

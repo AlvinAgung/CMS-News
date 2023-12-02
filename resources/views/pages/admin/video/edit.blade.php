@@ -26,7 +26,7 @@
                         <div class="col-xl-12 col-md-12 col-12">
                             <div class="card card-statistics">
                                 <div class="card-header">
-                                    <h4 class="card-title">Add Video</h4>
+                                    <h4 class="card-title">Edit Video</h4>
                                 </div>
                                 <div class="card-body">
                                     <form id="form-create" method="POST" action="{{ route('video.update',$show->id) }}" enctype="multipart/form-data">

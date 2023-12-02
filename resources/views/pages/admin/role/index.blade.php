@@ -26,12 +26,12 @@
                         <div class="col-xl-12 col-md-12 col-12">
                             <div class="card card-statistics">
                                 <div class="card-header">
-                                    <h4 class="card-title">Role Data</h4>
+                                    <h4 class="card-title">Data Role</h4>
                                     <div class="d-flex align-items-center">
-                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('role.create')}}">Add Role</a></button>
+                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('role.create')}}">Tambah Role</a></button>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x:auto;">
                                     <table class="dt-responsive table text-center">
                                         <thead>
                                             <tr>
@@ -46,8 +46,8 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>
-                                                    <a href="{{route('role.show', $item->id)}}"><button class="btn btn-warning">Update</button></a>
-                                                    <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+                                                    <a href="{{route('role.show', $item->id)}}"><button class="btn btn-warning"><i class="fa fa-edit"></i></button></a>
+                                                    <button class="btn btn-danger" onclick="confirmDelete()"><i class="fa fa-trash"></i></button>
                                                     <form id="deleteForm" action="{{route('role.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
@@ -72,10 +72,12 @@
 @push('before-js')
 @endpush
 @push('after-js')
-    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    {{-- <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script> --}}
     <script>
         function confirmDelete() {
             var result = window.confirm("Apakah kamu yakin ingin menghapus?");

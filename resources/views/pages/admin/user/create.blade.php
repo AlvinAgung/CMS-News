@@ -26,7 +26,7 @@
                         <div class="col-xl-12 col-md-12 col-12">
                             <div class="card card-statistics">
                                 <div class="card-header">
-                                    <h4 class="card-title">Add Jabatan</h4>
+                                    <h4 class="card-title">Tambah User</h4>
                                 </div>
                                 <div class="card-body">
                                     <form id="form-create" method="POST" action="{{ route('user.store') }}">
@@ -35,7 +35,7 @@
                                             <div class="mb-1">
                                                 <label class="form-label" for="name">Name</label>
                                                 <input type="text" id="name" class="form-control @error('name') is-invalid @enderror"
-                                                    placeholder="input jabatan name" aria-label="name" aria-describedby="name" name="name">
+                                                    placeholder="input user name" aria-label="name" aria-describedby="name" name="name">
                                                 @error('name')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
@@ -69,7 +69,7 @@
                                             </div>
 
                                             <div class="mb-1">
-                                                <label class="form-label" for="email">Village Officer</label>
+                                                <label class="form-label" for="email">Perangkat Desa</label>
                                                 <select class="form-control" name="village_officer_id" id="village_officer_id">
                                                     @foreach ($village_officer as $item)
                                                         <option value="{{$item->id}}">{{$item->name}}</option>

@@ -28,10 +28,10 @@
                                 <div class="card-header">
                                     <h4 class="card-title">Data Acara</h4>
                                     <div class="d-flex align-items-center">
-                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('acara.create')}}">Add Program</a></button>
+                                        <button type="button" class="btn btn-primary" id="btn-create"><a class="text-white" href="{{route('acara.create')}}">Tambah Acara</a></button>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x:auto;">
                                     <table class="dt-responsive table text-center">
                                         <thead>
                                             <tr>
@@ -48,8 +48,8 @@
                                                 <td>{{ $item->title }}</td>
                                                 <td><span class="badge badge-primary">{{ $item->time }}</span></td>
                                                 <td>
-                                                    <a href="{{route('acara.show', $item->id)}}"><button class="btn btn-warning">Update</button></a>
-                                                    <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+                                                    <a href="{{route('acara.show', $item->id)}}"><button class="btn btn-warning"><i class="fa fa-edit"></i></button></a>
+                                                    <button class="btn btn-danger" onclick="confirmDelete()"><i class="fa fa-trash"></i></button>
                                                     <form id="deleteForm" action="{{route('acara.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
@@ -74,10 +74,12 @@
 @push('before-js')
 @endpush
 @push('after-js')
-    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    {{-- <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+    <script src="{{ asset('') }}app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script> --}}
     <script>
         function confirmDelete() {
             var result = window.confirm("Apakah kamu yakin ingin menghapus?");
