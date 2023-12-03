@@ -29,7 +29,7 @@
                                 height="40" width="40"><span class="avatar-status-online">
                             @else
                                 <img class="round"
-                                src="{{ asset('') }}app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar"
+                                src="{{ asset('storage/asset-profil/user-profil.jpg') }}" alt="avatar"
                                 height="40" width="40"><span class="avatar-status-online">
                             @endif 
                            

@@ -136,7 +136,6 @@
 
                 <div class="row gy-4">
                     @foreach ($berita as $item)
-
                     <div class="col-xl-4 col-md-6">
                         <article>
 
@@ -150,10 +149,15 @@
                             <h2 class="title">
                                 <a href="news/{{$item->slug}}">{{$item->title}}</a>
                             </h2>
-
                             <div class="d-flex align-items-center">
+                                @if($item->user->role_id == '1')
                                 <img src="{{ asset('storage/asset-profil/user-profil.jpg') }}" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
+                                class="img-fluid post-author-img flex-shrink-0">
+                                @else
+                                <img src="{{ asset('storage/picture/perangkat-desa/'.$item->user->villageofficer->photo) }}"  alt=""
+                                class="img-fluid post-author-img flex-shrink-0" onError="this.onerror=null;this.src='{{asset('storage/asset-profil/user-profil.jpg')}}';"> 
+                                @endif
+                         
                                 <div class="post-meta">
                                     <p class="post-author">{{$item->user->name}}</p>
                                     <p class="post-date">

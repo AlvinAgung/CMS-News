@@ -14,8 +14,7 @@ class LandingController extends Controller
 {
     public function index()
     {
-
-        
+  
         $tanggal = date('Y-m-d');
         $view = Counter::where('tanggal',$tanggal)->first();
 
@@ -25,7 +24,7 @@ class LandingController extends Controller
         ]);
 
         $acara =  Acara::orderBy('created_at','desc')->get();
-        $berita = News::with('category','user')->where('status','PUBLISHED')->orderBy('created_at','desc')->limit(3)->get();
+        $berita = News::with('category','user.villageofficer')->where('status','PUBLISHED')->orderBy('created_at','desc')->limit(3)->get();
         $video = Video::orderBy('created_at','desc')->get();
         $video_utama = Video::where('status','VIDEO UTAMA')->first();
         $perangkat_desa = Villageofficer::with('jabatan')->paginate(4);
