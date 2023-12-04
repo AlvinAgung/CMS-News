@@ -63,8 +63,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="my-auto">
-                                                    <h4 class="fw-bolder mb-0">{{$totalvideo}}</h4>
-                                                    <p class="card-text font-small-3 mb-0">Video</p>
+                                                    <h4 class="fw-bolder mb-0">{{$totalvillageofficer}}</h4>
+                                                    <p class="card-text font-small-3 mb-0">Perangkat Desa</p>
                                                 </div>
                                             </div>
                                         </div>
